@@ -5,13 +5,13 @@ export const Edit = ({ film, setIsEdited }) => {
     const { saveEditChanges } = useContext(FilmsContext);
 
     return (
-        <div>
+        <div className="edit-form">
             <form onSubmit={(e) => {
                     setIsEdited(false);
                     saveEditChanges(e, film.id)
                 }}>
                 <input name="editedTitle" defaultValue={film.title} />
-                <textarea name="editedDescription" defaultValue={film.description} />
+                <textarea name="editedDescription" rows="5" defaultValue={film.description} />
                 <button type="submit">Actualizar</button>
             </form>
 
