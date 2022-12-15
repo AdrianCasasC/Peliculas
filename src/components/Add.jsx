@@ -1,7 +1,9 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import FilmsContext from '../context/films';
+import { FcFilmReel } from "react-icons/fc"
 
-export const Add = ({ setFilms }) => {
-    //const [newFilm, setNewFilm] = useState({});
+export const Add = () => {
+    const { setFilms } = useContext(FilmsContext);
 
     const addNewFilm = (e) => {
         e.preventDefault();
@@ -20,7 +22,7 @@ export const Add = ({ setFilms }) => {
 
     return (
         <div className="add">
-            <h2>Añadir nueva película</h2>
+            <h2><FcFilmReel /> Añadir nueva película</h2>
             <form onSubmit={e => addNewFilm(e)}>
                 <label>Título</label>
                 <input  name="title" type="text" placeholder="Título" />

@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import FilmsContext from '../context/films';
 
-export const Edit = ({ film, saveEditChanges, setIsEdited }) => {
-    
+export const Edit = ({ film, setIsEdited }) => {
+    const { saveEditChanges } = useContext(FilmsContext);
 
     return (
         <div>
