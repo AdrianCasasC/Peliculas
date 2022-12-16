@@ -16,6 +16,8 @@ export const PrincipalRouter = () => {
                 </header>
                 <nav className="nav">
                     <ul>
+
+                        {/* Solo se aplica un cierto estilo si es la pestaña seleccionada */}
                         <li>
                             <NavLink className={({isActive}) => isActive ? "navlink selected" : "navlink"} to={"/Inicio"}>Inicio</NavLink>
                         </li>

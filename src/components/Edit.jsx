@@ -7,7 +7,7 @@ export const Edit = ({ film, setIsEdited }) => {
     return (
         <div className="edit-form">
             <form onSubmit={(e) => {
-                    setIsEdited(false);
+                    setIsEdited(false);  {/* Actualización del estado a false para cerrar la pestaña de edición */}
                     saveEditChanges(e, film.id)
                 }}>
                 <input name="editedTitle" defaultValue={film.title} />

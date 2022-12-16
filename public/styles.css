@@ -1,3 +1,13 @@
+
+/*Estilos generales*/
+input,
+textarea {
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .layOut {
     background-color: white;
     display: grid;
@@ -12,6 +22,7 @@
     grid-template-rows: 100px 80px auto 50px;
 }
 
+/*Estilos de cabecera*/
 .header{
     grid-area: header;
     background-color: white;
@@ -21,6 +32,7 @@
     align-items: center;
 }
 
+/*Estilos de barra de navegación*/
 .nav{
     grid-area: nav;
     background: linear-gradient(45deg, #e66465, #9198e5);
@@ -63,11 +75,14 @@
     transform: none;
 }
 
+
+/*Estilos de contenido*/
 .content {
     grid-area: content;
     border: 1px solid black;
 }
 
+/* Pestaña de Acerca de */
 .about,
 .contact {
     margin: 20px;
@@ -81,6 +96,53 @@
     text-align: center;
 }
 
+.accordion {
+    background: linear-gradient(45deg, #e66465, #9198e5);
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 500px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: all 300ms;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid white;
+    
+
+}
+
+.open,
+.accordion:hover {
+    background: linear-gradient(45deg, #e664a5, #91bbe5);
+    color: white;
+}
+
+.exp-coll {
+    font-size: 20px;
+    position: relative;
+    top: 5px;
+    color: white;
+    margin-right: 10px;
+}
+
+.panel {
+    width: 462px;
+    padding: 10px 18px;
+    background: linear-gradient(45deg, #e664e0, #91d1e5);
+    border-left: 1px solid white;
+}
+
+.panel p {
+    margin: 0;
+    width: 400px;
+    color: black;
+    padding: 5px;
+}
+
+
+/* Pestaña de Inicio - Contenido*/
 .init {
     display: grid;
     grid-template-areas: 
@@ -99,25 +161,6 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-}
-
-.contact li {
-    margin: 10px;
-    list-style: none;
-}
-
-.contact a {
-    text-decoration: none;
-    color: black;
-}
-
-.contact a:hover {
-    color: #9198e5;
-}
-
-.icon {
-    margin-right: 5px;
-    font-size: 20px;
 }
 
 .film {
@@ -178,19 +221,13 @@
     background: #e66465;
 }
 
+/* /* Pestaña de Inicio - Barra lateral*/ */
+
 .lateral{
     grid-area: lateral;
     background-color: white;
     border: 1px solid black;
     text-align: center;
-}
-
-.search {
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .lateral button {
@@ -209,13 +246,6 @@
     cursor: pointer;
 }
 
-input,
-textarea {
-    border-radius: 5px;
-    padding: 10px;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
 .lateral .add {
     display: flex;
     flex-direction: column;
@@ -243,6 +273,37 @@ textarea {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
 }
+
+.search {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pestaña de contactos */
+.contact li {
+    margin: 10px;
+    list-style: none;
+}
+
+.contact a {
+    text-decoration: none;
+    color: black;
+}
+
+.contact a:hover {
+    color: #9198e5;
+}
+
+.icon {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+
+/* Estilos de footer */
 
 .footer{
     grid-area: footer;

@@ -8,6 +8,7 @@ export const Film = ({ film }) => {
     const [isEdited, setIsEdited] = useState(false);
 
     const editFilm = (id) => {
+        {/* Actualización del estado a true para abrir la ventana de edición */}
         setIsEdited(true);
       }
 
@@ -19,6 +20,8 @@ export const Film = ({ film }) => {
                 <button onClick={() => editFilm(film.id)} className='edit'>Editar</button>
                 <button onClick={() => deleteFilm(film.id)} className='delete'>Eliminar</button>
             </div>
+
+            {/* Solo se muestra el componente "Edit" si "isEdited" es true */}
             {isEdited && <Edit film={film} setIsEdited={setIsEdited}/>}
         </article>
     )
